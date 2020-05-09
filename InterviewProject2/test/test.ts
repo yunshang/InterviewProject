@@ -14,11 +14,12 @@ describe('shuffle function', () => {
     }
   }
 
-  it(`should two arg will success`, () => {
-    const arr1 = ['a1', 'a2', 'a3', 'a4']
+  it(`should three arg will success`, () => {
+    const arr1 = ['a1', 'a2', 'a3', 'a4', 'a5']
     const arr2 = ['b1', 'b2']
-    const flattenArry = ['a1', 'b1', 'a2', 'b2', 'a3', 'a4']
-    const result = shuffle(arr1, arr2);
+    const arr3 = ['c1', 'c2']
+    const flattenArry = [ 'a1', 'b1', 'a2', 'b2', 'a3', 'c1', 'a4', 'c2', 'a5' ]
+    const result = shuffle(arr1, arr2, arr3);
     expect(result).to.eql(flattenArry)
   });
 
